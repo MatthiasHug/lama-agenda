@@ -1,0 +1,14 @@
+tFEATURE | rename description file
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Wed Feb 11 15:14:07 2026 +0100
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	renamed:    static/description.html -> static/index.html
+#
