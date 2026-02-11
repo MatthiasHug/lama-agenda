@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traktanden-App mit SvelteKit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background: #f5f7fa;
+            color: #222;
+        }
+        header {
+            background: #ff3e00;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+            background: white;
+        }
+        h1, h2, h3 {
+            margin-top: 1.5rem;
+        }
+        code, pre {
+            background: #f0f0f0;
+            padding: 0.5rem;
+            display: block;
+            overflow-x: auto;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Traktanden-App mit SvelteKit</h1>
+    <p>Ein einfaches Webtool zum Verwalten von Traktanden – Fokus auf CI/CD im Modul 324</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>Projektidee</h2>
+        <p>
+            Diese Agenda- bzw. Traktanden-App wurde im Rahmen des Moduls 324 erstellt.
+            Der Fokus liegt nicht primär auf der Programmierung, sondern auf dem Aufbau
+            einer modernen CI/CD-Umgebung. Die Anwendung dient als einfach verständliches Beispielprojekt.
+        </p>
+    </section>
+
+    <section>
+        <h2>1. Installation von SvelteKit und Projektstart</h2>
+
+        <h3>Projekt erstellen</h3>
+        <pre><code>npm create svelte@latest my-agenda-app</code></pre>
+
+        <p>Im Wizard auswählen:</p>
+        <ul>
+            <li>Skeleton project</li>
+            <li>JavaScript with JSDoc comments</li>
+            <li>ESLint</li>
+            <li>Playwright</li>
+        </ul>
+
+        <h3>Dependencies installieren</h3>
+        <pre><code>cd my-agenda-app
+npm install</code></pre>
+
+        <h3>Projekt starten</h3>
+        <pre><code>npm run dev -- --open</code></pre>
+
+    </section>
+
+    <section>
+        <h2>2. Aufbau der Agenda-App</h2>
+        <p>
+            Die eigentliche Logik ist sehr einfach gehalten, damit der Fokus auf
+            Deployment und Automatisierung liegt. Der Code kann in der Datei
+            <code>src/routes/+page.svelte</code> ergänzt werden.
+        </p>
+
+        <pre><code>&lt;script&gt;
+let agenda = [];
+let newAgenda = '';
+
+function addAgenda() {
+  if (newAgenda) {
+    agenda = [...agenda, newAgenda];
+    newAgenda = '';
+  }
+}
+&lt;/script&gt;</code></pre>
+
+    </section>
+
+    <section>
+        <h2>3. Start der Anwendung</h2>
+        <p>Die App wird mit folgendem Befehl gestartet:</p>
+
+        <pre><code>npm run dev</code></pre>
+
+        <p>Danach ist sie im Browser erreichbar unter:</p>
+        <pre><code>http://127.0.0.1:5173</code></pre>
+
+    </section>
+
+    <section>
+        <h2>Technologien</h2>
+        <ul>
+            <li>SvelteKit</li>
+            <li>JavaScript (mit JSDoc)</li>
+            <li>ESLint</li>
+            <li>Playwright</li>
+            <li>Node.js / npm</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>Beispielprojekt – Traktanden-App mit SvelteKit</p>
+</footer>
+
+</body>
+</html>
