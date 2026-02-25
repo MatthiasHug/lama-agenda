@@ -1,19 +1,30 @@
-import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-static';
+//
+// /** @type {import('@sveltejs/kit').Config} */
+// const dev = process.argv.includes('dev');
+//
+// const config = {
+// 	kit: {
+// 		adapter: adapter({
+// 			pages: 'build',
+// 			assets: 'build',
+// 			fallback: 'index.html'
+// 		}),
+// 		paths: {
+// 			base: dev ? '' : '/lama-agenda'
+// 		}
+// 	}
+// };
+//
+// export default config;
 
-/** @type {import('@sveltejs/kit').Config} */
-const dev = process.argv.includes('dev');
+import adapter from '@sveltejs/adapter-node';
 
-const config = {
+export default {
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: 'index.html'
-		}),
-		paths: {
-			base: dev ? '' : '/lama-agenda'
-		}
+			out: 'build'
+		})
+		// ❌ KEINE `vite`-Option hier
 	}
 };
-
-export default config;
