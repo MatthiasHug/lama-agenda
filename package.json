@@ -35,7 +35,7 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
-		"@sveltejs/adapter-node": "^5.5.3",
+		"@sveltejs/adapter-node": "^5.5.4",
 		"docker": "^1.0.0"
 	}
 }
